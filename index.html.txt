@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Edjane Contabilidade - Serviços de contabilidade, apoio administrativo e soluções para empresas em Itabaiana, Sergipe.">
+    <meta name="author" content="Edjane Contabilidade">
+
+    <title>Edjane Contabilidade | Itabaiana - SE</title>
+
+    <!-- Bootstrap 5 -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        :root {
+            --azul: #0b2d4d;
+            --azul-claro: #124f7a;
+            --dourado: #c99a3d;
+            --dourado-claro: #e5c477;
+            --cinza: #f5f7fa;
+            --texto: #263238;
+            --branco: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--texto);
+            background: #fff;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: var(--azul);
+            padding: 15px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: #fff !important;
+        }
+
+        .navbar-brand i {
+            color: var(--dourado-claro);
+        }
+
+        .navbar .nav-link {
+            color: rgba(255,255,255,.85);
+            font-weight: 500;
+            margin-left: 12px;
+            transition: .3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--dourado-claro);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 27, 47, .97),
+                    rgba(11, 45, 77, .88),
+                    rgba(11, 45, 77, .60)
+                ),
+                linear-gradient(135deg, #0b2d4d, #174f78);
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 2px solid rgba(229,196,119,.18);
+            border-radius: 50%;
+            right: -150px;
+            top: 80px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: rgba(229,196,119,.15);
+            border: 1px solid rgba(229,196,119,.5);
+            color: var(--dourado-claro);
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: var(--dourado-claro);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 680px;
+            color: rgba(255,255,255,.85);
+            line-height: 1.8;
+        }
+
+        .btn-dourado {
+            background: var(--dourado);
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-dourado:hover {
+            background: #ad7e25;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,.6);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: white;
+            color: var(--azul);
+        }
+
+        /* SECTION */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title .small-title {
+            color: var(--dourado);
+            font-size: .85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-weight: 800;
+            color: var(--azul);
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 15px auto 0;
+            color: #68737d;
+        }
+
+        /* SOBRE */
+        .sobre {
+            background: var(--cinza);
+        }
+
+        .about-box {
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            box-shadow: 0 10px 35px rgba(0,0,0,.06);
+        }
+
+        .about-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: rgba(201,154,61,.12);
+            color: var(--dourado);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-box h4 {
+            color: var(--azul);
+            font-weight: 700;
+        }
+
+        .about-box p {
+            color: #66727c;
+            line-height: 1.8;
+        }
+
+        /* SERVIÇOS */
+        .service-card {
+            border: none;
+            border-radius: 16px;
+            padding: 32px 25px;
+            height: 100%;
+            background: white;
+            box-shadow: 0 8px 30px rgba(0,0,0,.07);
+            transition: .3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-bottom-color: var(--dourado);
+            box-shadow: 0 15px 35px rgba(0,0,0,.12);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--azul);
+            color: white;
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            color: var(--azul);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .service-card p {
+            color: #707b84;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* NÚMEROS */
+        .stats {
+            background: var(--azul);
+            color: white;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-box i {
+            color: var(--dourado-claro);
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            color: rgba(255,255,255,.7);
+            margin: 0;
+        }
+
+        /* DADOS */
+        .dados {
+            background: white;
+        }
+
+        .info-card {
+            border-radius: 15px;
+            border: 1px solid #e7ebef;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .info-card h4 {
+            color: var(--azul);
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 10px 0;
+            border-bottom: 1px dashed #e3e7ea;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #727d85;
+            font-size: .9rem;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: #263238;
+            text-align: right;
+            font-size: .9rem;
+        }
+
+        .status {
+            color: #198754;
+        }
+
+        /* CNAE */
+        .cnae-box {
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            color: white;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+        }
+
+        .cnae-box h4 {
+            font-weight: 700;
+        }
+
+        .cnae-item {
+            padding: 17px;
+            margin-top: 15px;
+            border-radius: 10px;
+            background: rgba(255,255,255,.08);
+            border-left: 3px solid var(--dourado-claro);
+        }
+
+        .cnae-item strong {
+            display: block;
+            color: var(--dourado-claro);
+            margin-bottom: 4px;
+        }
+
+        /* CTA */
+        .cta {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(11,45,77,.98),
+                    rgba(18,79,122,.95)
+                );
+            color: white;
+        }
+
+        .cta h2 {
+            font-weight: 800;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.8);
+            max-width: 700px;
+            margin: 15px auto 30px;
+        }
+
+        /* CONTATO */
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 8px 30px rgba(0,0,0,.06);
+            border: 1px solid #edf0f2;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            flex: 0 0 48px;
+            height: 48px;
+            background: rgba(11,45,77,.08);
+            color: var(--azul);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 22px;
+        }
+
+        .contact-item h6 {
+            margin-bottom: 5px;
+            color: var(--azul);
+            font-weight: 700;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: #707b84;
+        }
+
+        .contact-item a {
+            color: #707b84;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--dourado);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #061d32;
+            color: rgba(255,255,255,.75);
+            padding: 45px 0 25px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand i {
+            color: var(--dourado-claro);
+        }
+
+        .footer-text {
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--dourado-claro);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 35px;
+            padding-top: 20px;
+            font-size: .85rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 991px) {
+            .navbar .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                min-height: 620px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .info-row {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .info-value {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            <i class="bi bi-calculator"></i>
+            Edjane Contabilidade
+        </a>
+
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="tel:+557934313816" class="btn btn-dourado btn-sm">
+                        <i class="bi bi-telephone-fill"></i>
+                        Fale Conosco
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+<header class="hero" id="inicio">
+
+    <div class="container">
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                <i class="bi bi-patch-check-fill"></i>
+                Contabilidade em Itabaiana - SE
+            </span>
+
+            <h1>
+                Cuidamos da sua<br>
+                <span>contabilidade.</span>
+            </h1>
+
+            <p class="mt-4">
+                Soluções contábeis e apoio administrativo para ajudar
+                empresas e empreendedores a manterem suas obrigações
+                em ordem e tomarem decisões com mais segurança.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+
+                <a href="#servicos" class="btn btn-dourado">
+                    <i class="bi bi-arrow-right-circle me-2"></i>
+                    Conheça nossos serviços
+                </a>
+
+                <a href="#contato" class="btn btn-outline-light-custom">
+                    <i class="bi bi-chat-dots me-2"></i>
+                    Entre em contato
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+<section class="sobre" id="sobre">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">Sobre nós</div>
+
+            <h2>Experiência e compromisso com sua empresa</h2>
+
+            <p>
+                A Edjane Contabilidade atua desde 2011 oferecendo
+                serviços de contabilidade e apoio administrativo,
+                buscando proporcionar organização, segurança e
+                tranquilidade aos seus clientes.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+
+                    <h4>Experiência</h4>
+
+                    <p>
+                        Empresa fundada em 19 de dezembro de 2011,
+                        com atuação no município de Itabaiana,
+                        Sergipe.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Segurança</h4>
+
+                    <p>
+                        Organização das informações e obrigações
+                        contábeis para auxiliar sua empresa em
+                        suas atividades.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Atendimento</h4>
+
+                    <p>
+                        Atendimento próximo e personalizado para
+                        entender as necessidades de cada negócio
+                        e empreendedor.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+<section id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">Nossos serviços</div>
+
+            <h2>Atividades de contabilidade</h2>
+
+            <p>
+                Serviços pensados para apoiar sua empresa na
+                organização contábil e administrativa.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Serviços de Contabilidade</h4>
+
+                    <p>
+                        Apoio nas atividades contábeis e na organização
+                        das informações necessárias para sua empresa.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Organização Contábil</h4>
+
+                    <p>
+                        Organização de documentos e informações para
+                        facilitar o acompanhamento da situação da empresa.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>Apoio Empresarial</h4>
+
+                    <p>
+                        Suporte às necessidades administrativas e
+                        contábeis do dia a dia empresarial.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-folder-check"></i>
+                    </div>
+
+                    <h4>Gestão de Documentos</h4>
+
+                    <p>
+                        Auxílio na organização das informações e
+                        documentos relacionados às atividades da empresa.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h4>Apoio Administrativo</h4>
+
+                    <p>
+                        Serviços combinados de escritório e apoio
+                        administrativo para empresas e profissionais.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Informações para Decisão</h4>
+
+                    <p>
+                        Informações organizadas para auxiliar o
+                        empresário no acompanhamento do negócio.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NÚMEROS
+========================= -->
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-box">
+                    <i class="bi bi-calendar-check"></i>
+                    <h3>2011</h3>
+                    <p>Fundação</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-box">
+                    <i class="bi bi-building-check"></i>
+                    <h3>Ativa</h3>
+                    <p>Situação cadastral</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-box">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Itabaiana</h3>
+                    <p>Sergipe</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-box">
+                    <i class="bi bi-person-badge"></i>
+                    <h3>CRC</h3>
+                    <p>SE-000397/O</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+<section class="dados" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">Informações</div>
+
+            <h2>Dados da empresa</h2>
+
+            <p>
+                Informações cadastrais e atividades registradas
+                da Edjane Contabilidade.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- DADOS CADASTRAIS -->
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <h4>
+                        <i class="bi bi-building me-2"></i>
+                        Informações de Registro
+                    </h4>
+
+                    <div class="info-row">
+                        <span class="info-label">CNPJ</span>
+                        <span class="info-value">14.782.896/0001-12</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Razão Social</span>
+                        <span class="info-value">
+                            Edjane Rezende Andrade Oliveira
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Nome Fantasia</span>
+                        <span class="info-value">
+                            Edjane Contabilidade
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Data de Abertura</span>
+                        <span class="info-value">19/12/2011</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Porte</span>
+                        <span class="info-value">Micro Empresa</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Natureza Jurídica</span>
+                        <span class="info-value">
+                            Empresário (Individual)
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Simples Nacional</span>
+                        <span class="info-value">Sim</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Capital Social</span>
+                        <span class="info-value">R$ 5.000,00</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Tipo</span>
+                        <span class="info-value">Matriz</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-label">Situação</span>
+                        <span class="info-value status">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Ativa
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CNAE -->
+            <div class="col-lg-6">
+
+                <div class="cnae-box">
+
+                    <h4>
+                        <i class="bi bi-list-check me-2"></i>
+                        Atividades - CNAEs
+                    </h4>
+
+                    <p class="mt-3 text-white-50">
+                        Atividades econômicas cadastradas da empresa.
+                    </p>
+
+                    <div class="cnae-item">
+
+                        <strong>Atividade Principal</strong>
+
+                        <div>
+                            69.20-6-01
+                        </div>
+
+                        <small class="text-white-50">
+                            Atividades de contabilidade
+                        </small>
+
+                    </div>
+
+
+                    <div class="cnae-item">
+
+                        <strong>Atividade Secundária</strong>
+
+                        <div>
+                            82.11-3-00
+                        </div>
+
+                        <small class="text-white-50">
+                            Serviços combinados de escritório e
+                            apoio administrativo
+                        </small>
+
+                    </div>
+
+
+                    <div class="mt-4 pt-3 border-top border-light border-opacity-10">
+
+                        <small class="text-white-50">
+                            Registro profissional
+                        </small>
+
+                        <div class="fw-bold mt-1">
+                            CRC: SE-000397/O
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta text-center">
+
+    <div class="container">
+
+        <i class="bi bi-chat-square-text display-5 text-warning"></i>
+
+        <h2 class="mt-3">
+            Precisa de apoio para sua empresa?
+        </h2>
+
+        <p>
+            Entre em contato com a Edjane Contabilidade e
+            conheça nossas soluções contábeis e administrativas.
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+
+            <a 
+                href="mailto:gazmirmlzane@gmail.com"
+                class="btn btn-dourado"
+            >
+                <i class="bi bi-envelope-fill me-2"></i>
+                Enviar E-mail
+            </a>
+
+            <a 
+                href="tel:+557934313816"
+                class="btn btn-outline-light-custom"
+            >
+                <i class="bi bi-telephone-fill me-2"></i>
+                (79) 3431-3816
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+<section id="contato">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">Fale conosco</div>
+
+            <h2>Entre em contato</h2>
+
+            <p>
+                Estamos localizados no Centro de Itabaiana,
+                Sergipe.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="contact-card">
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+
+                        <div>
+                            <h6>E-mail</h6>
+                            <p>
+                                <a href="mailto:gazmirmlzane@gmail.com">
+                                    gazmirmlzane@gmail.com
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+
+                        <div>
+                            <h6>Telefone</h6>
+                            <p>
+                                <a href="tel:+557934313816">
+                                    (79) 3431-3816
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+
+                        <div>
+                            <h6>Endereço</h6>
+
+                            <p>
+                                Rua General Valadao, 38<br>
+                                Andar 1 - Centro<br>
+                                Itabaiana - SE<br>
+                                CEP: 49500-256
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-file-earmark-check"></i>
+                        </div>
+
+                        <div>
+                            <h6>CNPJ</h6>
+                            <p>14.782.896/0001-12</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="contact-card d-flex flex-column justify-content-center">
+
+                    <div class="text-center">
+
+                        <div class="about-icon mx-auto">
+                            <i class="bi bi-map"></i>
+                        </div>
+
+                        <h4 class="fw-bold text-dark">
+                            Nossa localização
+                        </h4>
+
+                        <p class="text-muted">
+                            Rua General Valadao, 38 - Andar 1<br>
+                            Centro - Itabaiana/SE
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Rua+General+Valadao+38+Itabaiana+SE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-dourado mt-2"
+                        >
+                            <i class="bi bi-google me-2"></i>
+                            Procurar no Google Maps
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-7">
+
+                <div class="footer-brand">
+                    <i class="bi bi-calculator"></i>
+                    Edjane Contabilidade
+                </div>
+
+                <p class="footer-text">
+                    Serviços de contabilidade e apoio administrativo
+                    para empresas e empreendedores em Itabaiana,
+                    Sergipe.
+                </p>
+
+                <p class="mb-0">
+                    <i class="bi bi-geo-alt-fill text-warning me-1"></i>
+                    Itabaiana - Sergipe
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6 class="text-white fw-bold mb-3">
+                    Navegação
+                </h6>
+
+                <div class="footer-links">
+
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#empresa">Empresa</a>
+                    <a href="#contato">Contato</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <h6 class="text-white fw-bold mb-3">
+                    Contato
+                </h6>
+
+                <div class="footer-links">
+
+                    <a href="tel:+557934313816">
+                        <i class="bi bi-telephone me-1"></i>
+                        (79) 3431-3816
+                    </a>
+
+                    <a href="mailto:gazmirmlzane@gmail.com">
+                        <i class="bi bi-envelope me-1"></i>
+                        Enviar e-mail
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright text-center">
+
+            <p class="mb-1">
+                © 2026 Edjane Contabilidade. Todos os direitos reservados.
+            </p>
+
+            <small>
+                CNPJ: 14.782.896/0001-12
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
